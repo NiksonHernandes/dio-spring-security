@@ -1,7 +1,8 @@
 
 # DIO - Spring Security
 
-#### Autores
+## 🧑🏻‍🎓 Autor:
+
 - [Nikson Hernandes](https://github.com/NiksonHernandes)
 
 
@@ -37,7 +38,46 @@ Este projeto utiliza **Spring Security** com autenticação baseada em **JWT (JS
 
 ## 🤔 Como gerar a chave pública e privada para minha aplicação?
 
+#### Com Linux ou sistema MacOs:   
+1. Acesse [CryptoTools.net](https://cryptotools.net/rsagen) e gere a chave pública e privada.
 
-![Logo Spring Security](https://spring.io/images/spring-security-5f8dc0979a36a2e7bdf7b8c8dd0c4dc2.svg)
+#### Com Windows, vamos usar o Ubuntu via WSL:
+1. Baixar o Ubunto WSL na sua máquina.
 
+2. Gerar a chave privada `.pem`:
+
+   `openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:2048`
+
+- Isso cria a chave **privada** no formato **PKCS#8**, ideal para usar com JWT e Java.
+
+3. Gerar a chave pública `.pem`:
+
+   `openssl rsa -pubout -in private_key.pem -out public_key.pem`
+
+- Isso extrai a chave **pública** do arquivo `.pem` anterior
+
+#### Copiar os arquivos para seu projeto 
+1. Você pode acessar as chaves em /home/SEU_USUARIO/ ou onde você estiver.
+
+2. Ou copie para sua pasta do projeto com (Caminho de exemplo: *C:/Users/Acer*):
+
+`cp private_key.pem /mnt/c/Users/Acer/`
+
+`cp public_key.pem /mnt/c/Users/Acer/`
+
+* Isso copiará as chaves para o caminho de destinho *C:/Users/Acer*
+
+🟥 *Se precisar de ajuda para carregar as chaves no Spring Boot ou converter formatos, consulte a documentação do projeto ou entre em contato.*
+
+
+## Contributing
+
+Contribuições são bem-vindas!
+
+Veja `README.md` para mais informações e comece a contruibuir.
+
+
+
+## 🔗 Links
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nikson-hernandes-55492b207/)
 
