@@ -61,9 +61,9 @@ Este projeto utiliza **Spring Security** com autenticação baseada em **JWT (JS
 
 2. Ou copie para sua pasta do projeto com (Caminho de exemplo: *C:/Users/Acer*):
 
-`cp private_key.pem /mnt/c/Users/Acer/`
+  `cp private_key.pem /mnt/c/Users/Acer/`
 
-`cp public_key.pem /mnt/c/Users/Acer/`
+  `cp public_key.pem /mnt/c/Users/Acer/`
 
 * Isso copiará as chaves para o caminho de destinho *C:/Users/Acer*
 
